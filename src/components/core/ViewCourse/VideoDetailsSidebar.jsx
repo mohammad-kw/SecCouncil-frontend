@@ -10,8 +10,6 @@ import { useDispatch } from "react-redux";
 import { markLectureAsComplete } from "../../../services/operations/courseDetailsAPI";
 import { updateCompletedLectures } from "../../../slices/viewCourseSlice";
 
-const { token } = useSelector((state) => state.auth);
-
 const handleMarkLectureComplete = async (subsectionId) => {
   try {
     const data = {
@@ -31,6 +29,7 @@ const handleMarkLectureComplete = async (subsectionId) => {
 
 export default function VideoDetailsSidebar({ setReviewModal }) {
   const dispatch = useDispatch();
+  const { token } = useSelector((state) => state.auth);
   const [activeStatus, setActiveStatus] = useState("");
   const [videoBarActive, setVideoBarActive] = useState("");
   const navigate = useNavigate();
