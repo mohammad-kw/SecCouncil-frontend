@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 // Image and Video Import
 import Banner from "../assets/Images/banner.mp4";
+
+import vid from "../assets/Images/main_01.mp4";
+
 // Component Imports
 import Footer from "../components/common/Footer";
 import ReviewSlider from "../components/common/ReviewSlider";
@@ -63,7 +66,8 @@ function Home() {
             loop
             autoPlay
           >
-            <source src={Banner} type="video/mp4" />
+            {/* <source src={Banner} type="video/mp4" /> */}
+            <source src={vid} type="video/mp4" />
           </video>
         </div>
 
