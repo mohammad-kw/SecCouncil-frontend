@@ -412,6 +412,8 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import BackToTop from "./components/common/BackToTop";
 import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import CookiePolicy from "./pages/CookiePolicy";
+import Report from "./pages/Report";
 import Loading from "./components/common/Loading";
 import Project from "./pages/Project";
 import Chatbot from "./pages/Chatbot";
@@ -421,6 +423,8 @@ import ShowAllCoursesPage from "./pages/ShowAllCoursesPage"; // Adjust the path 
 
 import AddCategory from "./pages/AddCategory";
 import AdminDashboard from "./pages/AdminDashboard";
+
+import EditPage from "./pages/EditPage"; // Import the EditPage component
 
 function App() {
   const dispatch = useDispatch();
@@ -499,7 +503,12 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/rateus" element={<Rateus />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/termsandconditions" element={<TermsAndConditions />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/report" element={<Report />} />
+
+        {/* EditPage route (accessible to admins only) */}
+        <Route path="/edit-pages" element={<EditPage />} />
 
         <Route
           element={

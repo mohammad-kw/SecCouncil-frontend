@@ -69,7 +69,7 @@
 import { useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "../components/core/Dashboard/Sidebar";
-import IconBtn from "../components/common/IconBtn"; // Import the IconBtn component
+import IconBtn from "../components/common/IconBtn";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -114,6 +114,11 @@ function Dashboard() {
                 text="Create Category"
                 onclick={() => navigate("/createcategory")}
                 customClasses="bg-green-600 hover:bg-green-700 text-white px-6 py-2"
+              />
+              <IconBtn
+                text="Edit Pages"
+                onclick={() => navigate("/edit-pages")}
+                customClasses="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2"
               />
             </div>
           )}

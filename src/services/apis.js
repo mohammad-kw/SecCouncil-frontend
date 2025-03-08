@@ -77,3 +77,9 @@ export const settingsEndpoints = {
 export const courses = {
   COURSES_API: BASE_URL + "/course/getAllCourses",
 };
+
+// PAGE CONTENT ENDPOINTS
+export const pageEndpoints = {
+  FETCH_PAGE_CONTENT: BASE_URL + "/pages/:pageName", // Fetch page content
+  UPDATE_PAGE_CONTENT: BASE_URL + "/pages/:pageName", // Update page content
+};
