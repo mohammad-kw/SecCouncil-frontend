@@ -83,3 +83,11 @@ export const pageEndpoints = {
   FETCH_PAGE_CONTENT: BASE_URL + "/pages/:pageName", // Fetch page content
   UPDATE_PAGE_CONTENT: BASE_URL + "/pages/:pageName", // Update page content
 };
+
+// NOTIFICATION ENDPOINTS
+export const notificationEndpoints = {
+  SEND_TO_ALL_API: BASE_URL + "/notifications/send-to-all",
+  SEND_TO_GROUP_API: BASE_URL + "/notifications/send-to-group",
+  GET_NOTIFICATION_HISTORY_API: BASE_URL + "/notifications/history",
+  REGISTER_FCM_TOKEN_API: BASE_URL + "/notifications/register-token",
+};

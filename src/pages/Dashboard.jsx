@@ -71,6 +71,8 @@ import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "../components/core/Dashboard/Sidebar";
 import IconBtn from "../components/common/IconBtn";
 
+import NotificationPermission from "../components/common/NotificationPermission";
+
 function Dashboard() {
   const navigate = useNavigate();
   const { loading: profileLoading, user } = useSelector(
@@ -95,10 +97,13 @@ function Dashboard() {
       {showSidebar && <Sidebar />}
       <div className={`flex-1 overflow-auto ${showSidebar ? "" : "w-full"}`}>
         <div className="mx-auto w-full max-w-[1000px] py-10 px-4 sm:px-6 lg:px-8">
+          {/* Add the notification permission component */}
+          <NotificationPermission />
+
           {/* My Profile Title */}
-          <h2 className="text-2xl font-bold text-richblack-900 mb-4">
+          {/* <h2 className="text-2xl font-bold text-richblack-900 mb-4">
             My Profile
-          </h2>
+          </h2> */}
 
           {/* Outlet to render other pages inside Dashboard */}
           <Outlet />
@@ -119,6 +124,11 @@ function Dashboard() {
                 text="Edit Pages"
                 onclick={() => navigate("/edit-pages")}
                 customClasses="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2"
+              />
+              <IconBtn
+                text="Notifications"
+                onclick={() => navigate("/notification-manager")}
+                customClasses="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2"
               />
             </div>
           )}
