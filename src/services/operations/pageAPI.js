@@ -31,34 +31,6 @@ export async function fetchPageContent(pageName) {
   }
 }
 
-// export async function updatePageContent(pageName, content) {
-//   try {
-//     const endpoint = pageEndpoints.UPDATE_PAGE_CONTENT.replace(
-//       ":pageName",
-//       encodeURIComponent(pageName)
-//     );
-
-//     const response = await apiConnector("PUT", endpoint, {
-//       content,
-//     });
-
-//     if (response && response.data && response.data.success) {
-//       return response.data.data;
-//     } else {
-//       throw new Error("Failed to update page content");
-//     }
-//   } catch (error) {
-//     // Handle authentication errors specifically
-//     if (error.response && error.response.status === 401) {
-//       console.error("Authentication error: You must be logged in as an admin");
-//       throw new Error("Authentication required: Please log in as an admin");
-//     } else {
-//       console.error("Error updating page content:", error);
-//       throw error;
-//     }
-//   }
-// }
-
 // new deepseek
 
 // services/operations/pageAPI.js
