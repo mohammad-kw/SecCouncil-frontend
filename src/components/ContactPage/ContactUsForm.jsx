@@ -1,35 +1,35 @@
-import React, { useEffect, useState } from "react"
-import { useForm } from "react-hook-form"
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 
-import CountryCode from "../../data/countrycode.json"
-import { apiConnector } from "../../services/apiconnector"
-import { contactusEndpoint } from "../../services/apis"
+import CountryCode from "../../data/countrycode.json";
+import { apiConnector } from "../../services/apiconnector";
+import { contactusEndpoint } from "../../services/apis";
 
 const ContactUsForm = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitSuccessful },
-  } = useForm()
+  } = useForm();
 
   const submitContactForm = async (data) => {
     // console.log("Form Data - ", data)
     try {
-      setLoading(true)
+      setLoading(true);
       const res = await apiConnector(
         "POST",
         contactusEndpoint.CONTACT_US_API,
         data
-      )
+      );
       // console.log("Email Res - ", res)
-      setLoading(false)
+      setLoading(false);
     } catch (error) {
-      console.log("ERROR MESSAGE - ", error.message)
-      setLoading(false)
+      console.log("ERROR MESSAGE - ", error.message);
+      setLoading(false);
     }
-  }
+  };
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -39,9 +39,9 @@ const ContactUsForm = () => {
         lastname: "",
         message: "",
         phoneNo: "",
-      })
+      });
     }
-  }, [reset, isSubmitSuccessful])
+  }, [reset, isSubmitSuccessful]);
 
   return (
     <form
@@ -51,7 +51,11 @@ const ContactUsForm = () => {
     >
       <div className="flex flex-col gap-5 lg:flex-row">
         <div className="flex flex-col gap-2 lg:w-[48%]">
-          <label htmlFor="firstname" className="lable-style" style={{ color: "black" }}>
+          <label
+            htmlFor="firstname"
+            className="lable-style"
+            style={{ color: "black" }}
+          >
             First Name
           </label>
           <input
@@ -70,7 +74,11 @@ const ContactUsForm = () => {
           )}
         </div>
         <div className="flex flex-col gap-2 lg:w-[48%]">
-          <label htmlFor="lastname" className="lable-style" style={{ color: "black" }}>
+          <label
+            htmlFor="lastname"
+            className="lable-style"
+            style={{ color: "black" }}
+          >
             Last Name
           </label>
           <input
@@ -86,7 +94,11 @@ const ContactUsForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="lable-style" style={{ color: "black" }}>
+        <label
+          htmlFor="email"
+          className="lable-style"
+          style={{ color: "black" }}
+        >
           Email Address
         </label>
         <input
@@ -106,7 +118,11 @@ const ContactUsForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="phonenumber" className="lable-style" style={{ color: "black" }}>
+        <label
+          htmlFor="phonenumber"
+          className="lable-style"
+          style={{ color: "black" }}
+        >
           Phone Number
         </label>
 
@@ -126,7 +142,7 @@ const ContactUsForm = () => {
                   <option key={i} value={ele.code}>
                     {ele.code} -{ele.country}
                   </option>
-                )
+                );
               })}
             </select>
           </div>
@@ -157,14 +173,18 @@ const ContactUsForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="lable-style" style={{ color: "black" }}>
+        <label
+          htmlFor="message"
+          className="lable-style"
+          style={{ color: "black" }}
+        >
           Message
         </label>
         <textarea
           name="message"
           id="message"
-          cols="30"
-          rows="7"
+          cols="10"
+          rows="2"
           placeholder="Enter your message here"
           className="form-style"
           style={{ color: "black" }}
@@ -189,7 +209,7 @@ const ContactUsForm = () => {
         Send Message
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default ContactUsForm
+export default ContactUsForm;

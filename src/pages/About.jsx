@@ -108,17 +108,17 @@ const About = () => {
       <StatsComponenet />
       <section className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white">
         <LearningGrid />
-        <ContactFormSection />
+        {/* <ContactFormSection /> */}
       </section>
 
-      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-black-900 text-white">
-        {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl  font-semibold mt-8">
+      {/* <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-black-900 text-white"> */}
+      {/* Reviws from Other Learner */}
+      {/* <h1 className="text-center text-4xl  font-semibold mt-8">
           Happy & Satisfied Learners!
-        </h1>
-        {/* <ReviewSlider /> */}
-        <ReviewSlider />
-      </div>
+        </h1> */}
+      {/* <ReviewSlider /> */}
+      {/* <ReviewSlider /> */}
+      {/* </div> */}
       {/* <Footer /> */}
       {/* <Footer /> */}
     </div>

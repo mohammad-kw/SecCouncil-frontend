@@ -6,15 +6,15 @@ import ReviewSlider from "../components/common/ReviewSlider";
 
 const Contact = () => {
   return (
-    <div className="mb-10">
-      <div className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white lg:flex-row">
+    <div className="mb-5">
+      <div className="mx-auto mt-5 flex w-11/12 max-w-maxContent flex-col justify-center gap-5 text-white lg:flex-row">
         {/* Contact Details */}
-        <div className="lg:w-[40%]">
+        {/* <div className="lg:w-[40%]">
           <ContactDetails />
-        </div>
+        </div> */}
 
         {/* Contact Form */}
-        <div className="lg:w-[60%]">
+        <div className="lg:w-[90%]">
           <ContactForm />
         </div>
       </div>

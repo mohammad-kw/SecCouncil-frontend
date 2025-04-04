@@ -26,9 +26,9 @@ const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms", "Report"];
 // ];
 // const Plans = ["Paid memberships", "For students", "Business solutions"];
 const Community = [
-  { name: "Forums", link: "forums" },
-  { name: "Chapters", link: "chapters" },
-  { name: "Events", link: "events" },
+  { name: "Forums", link: "/" },
+  { name: "Chapters", link: "/" },
+  { name: "Events", link: "/" },
   {
     name: "Contribute",
 
@@ -57,14 +57,14 @@ const Footer = () => {
                     key={i}
                     className="text-[14px] cursor-pointer hover:text-yellow-50 transition-all duration-200"
                   >
-                    <Link to={`/${ele.toLowerCase()}`}>{ele}</Link>
+                    <Link to={`/`}>{ele}</Link>
                   </div>
                 ))}
               </div>
               <div className="flex gap-3 mt-4 text-lg">
                 {[
                   { icon: <FaFacebook />, link: "https://www.facebook.com" },
-                  { icon: <FaGoogle />, link: "https://projects.100xdevs.com" },
+                  { icon: <FaGoogle />, link: "https://www.google.com" },
                   { icon: <FaXTwitter />, link: "https://www.twitter.com" },
                   { icon: <FaYoutube />, link: "https://www.youtube.com" },
                   { icon: <FaLinkedin />, link: "https://www.linkedin.com" },
@@ -125,7 +125,7 @@ const Footer = () => {
                 Support
               </h1>
               <div className="text-[14px] cursor-pointer hover:text-yellow-50 transition-all duration-200 mt-2">
-                <Link to="/help-center">Help Center</Link>
+                <Link to="/contact">Help Center</Link>
               </div>
             </div>
 
@@ -210,7 +210,8 @@ const Footer = () => {
             ))}
           </div>
           <div className="text-center mt-4 lg:mt-0">
-            Made with ❤️ © {new Date().getFullYear()} SecCouncil
+            {/* Made with ❤️ © {new Date().getFullYear()} SecCouncil */}
+            Powered By CyBite
           </div>
         </div>
       </div>
