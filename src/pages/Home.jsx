@@ -186,10 +186,10 @@ function Home() {
         <InstructorSection />
 
         {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl font-semibold mt-8">
+        {/*<h1 className="text-center text-4xl font-semibold mt-8">
           Happy & Satisfied Learners!
         </h1>
-        <ReviewSlider />
+        <ReviewSlider /> */}
       </div>
 
       <FAQ />
