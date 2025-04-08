@@ -168,7 +168,7 @@ export default function MyProfile() {
       </h1>
 
       {/* Enrolled Courses Section (Visible only for Students) */}
-      {user?.accountType === "Student" && (
+      {/* {user?.accountType === "Student" && (
         <div className="my-10 rounded-md border-[1px] border-black bg-mwhite p-6 sm:p-8">
           <h2 className="text-xl font-semibold text-black mb-4">
             Enrolled Courses
@@ -181,7 +181,7 @@ export default function MyProfile() {
             iconName="VscBook" // Example icon (change if needed)
           />
         </div>
-      )}
+      )} */}
 
       {/* Profile Section */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-y-4 rounded-md border-[1px] border-black bg-mwhite p-6 sm:p-8">
