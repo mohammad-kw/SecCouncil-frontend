@@ -235,14 +235,14 @@ export default function ProfileDropdown() {
           className="absolute top-[120%] right-0 z-50 min-w-[200px] origin-top-right divide-y divide-gray-200 rounded-lg border border-gray-300 bg-mwhite shadow-lg transition-transform duration-300 transform scale-95 opacity-0 animation-dropdown"
         >
           {/* Dashboard Link */}
-          <Link
+          {/* <Link
             to={getDashboardLink()}
             onClick={handleLinkClick}
             className="flex w-full items-center gap-x-2 py-3 px-4 text-sm text-gray-700 hover:bg-blue-700 hover:text-white transition-colors duration-200"
           >
             <VscDashboard className="text-lg" />
             Dashboard
-          </Link>
+          </Link> */}
 
           {/* My Profile Link */}
           <Link
